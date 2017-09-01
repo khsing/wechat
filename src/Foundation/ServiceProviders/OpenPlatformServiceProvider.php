@@ -156,7 +156,7 @@ class OpenPlatformServiceProvider implements ServiceProviderInterface
                     'redirect' => $callback,
                 ],
             ];
-            if ($pimple['config']->has('guzzle')){
+            if ($pimple['config']->has('guzzle')) {
                 $config['guzzle'] = $pimple['config']['guzzle'];
             }
             $socialite = (new Socialite($config))->driver('wechat_open');
